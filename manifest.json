@@ -1,0 +1,16 @@
+{
+  "name": "Rapporti Termoidraulica",
+  "short_name": "Rapporti",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e9ecef",
+  "theme_color": "#2980b9",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/9431/9431186.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
