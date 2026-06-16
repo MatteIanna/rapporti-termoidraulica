@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // INSERISCI QUI IL TUO URL (quello che finisce con /exec)
+    // URL ufficiale di Google Apps Script integrato
     const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbwrZwQf90neLrxEbbxio4ANtZhwHDbbCBoHfJbFFaJcTTKWANA09RTdTJpCnra942Ac/exec"; 
     
     const form = document.getElementById('formIntervento');
@@ -53,3 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Registrazione del Service Worker per il funzionamento offline e l'installazione PWA
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log('PWA configurata correttamente!'))
+        .catch(err => console.error('Errore registrazione PWA:', err));
+}
